@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Faktöriyelini hesaplamak istediğiniz bir sayı girin:");
+        int sayi = Convert.ToInt32(Console.ReadLine());
+
+        long faktoriyel = FaktoriyelHesapla(sayi);
+
+        Console.WriteLine($"{sayi}! = {faktoriyel}");
+    }
+
+    static long FaktoriyelHesapla(int n)
+    {
+        if (n == 0 || n == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return n * FaktoriyelHesapla(n - 1);
+        }
+    }
+}
